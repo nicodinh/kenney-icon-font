@@ -1,0 +1,18 @@
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="48" height="48" id="svg5057" version="1.1" inkscape:version="0.91 r13725" viewBox="0 0 48 48" sodipodi:docname="all_icons.tar">
+  <defs id="defs5059"/>
+  <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="5.3607533" inkscape:cx="17.083968" inkscape:cy="9.574371" inkscape:current-layer="layer36" showgrid="true" inkscape:grid-bbox="true" inkscape:document-units="px" inkscape:window-width="1680" inkscape:window-height="988" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1" showguides="true">
+    <inkscape:grid type="xygrid" id="grid6922"/>
+  </sodipodi:namedview>
+  <metadata id="metadata5062">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g inkscape:groupmode="layer" id="layer153" inkscape:label="car" style="display:inline">
+    <path id="path6568" style="display:inline;fill:#000000;stroke:none" d="m 29.95,29.8 q 1.4,-1.45 3.35,-1.45 2,0 3.45,1.45 l 0,-0.05 q 1.35,1.45 1.35,3.45 l -0.05,1.15 q -0.3,1.25 -1.3,2.3 Q 35.3,38 33.3,38 31.35,38 29.95,36.65 28.9,35.55 28.6,34.2 l 0,-0.05 -0.1,-0.95 q 0,-1.95 1.45,-3.4 m -20.2,3.4 q 0,-2 1.45,-3.45 l 0,0.05 q 1.35,-1.45 3.35,-1.45 1.95,0 3.45,1.4 l 0,0.05 q 1.4,1.45 1.4,3.4 l -0.05,0.85 Q 19.05,35.55 18,36.65 16.55,38 14.55,38 12.55,38 11.2,36.65 10,35.45 9.8,33.95 L 9.75,33.2 m 4.8,-6.55 q -2.7,0 -4.65,1.9 Q 8,30.5 8,33.2 L 8.05,34.15 4.5,34.05 4.5,21.9 13,21 l 4.6,-11 11.9,0 4.4,10.4 9.6,1.5 -0.65,12.85 -3.1,-0.05 0.1,-1.5 q 0,-2.7 -1.9,-4.65 -1.9,-1.9 -4.65,-1.9 -2.7,0 -4.6,1.9 -1.95,1.95 -1.95,4.65 l 0.15,1.3 -5.85,-0.15 0.05,-1.15 q 0,-2.7 -1.9,-4.65 -1.95,-1.9 -4.65,-1.9" inkscape:connector-curvature="0"/>
+  </g>
+  </svg>
