@@ -2,7 +2,7 @@
  |	KENNEY ICON FONT
  |	@file		./css/demo.page.css
  |	@author		KENNEY.nl & SamBrishes, pytesNET
- |	@version	0.1.0 [0.1.0]
+ |	@version	0.2.0 [0.2.0]
  |
  |	@license	CC0 1.0
  */
@@ -30,27 +30,81 @@ a{
 a:hover{
 	color: #608822;
 }
+.left{ text-align: left; }
+.right{ text-align: right; }
+.center{ text-align: center; }
 .container{
 	width: 1000px;
 	margin: 0 auto;
 	padding: 0;
 	display: block;
 }
-.tooltip{
-	top: -6px;
-	left: -5px;
-	width: auto;
-	color: #fff;
+.table{
+	width: 100%;
+	display: table;
+	vertical-align: top;
+}
+.cell{
+	display: table-cell;
+	vertical-align: top;
+}
+.label{
+	color: #777;
+	height: 24px;
 	margin: 0;
-	padding: 2px 8px;
-	z-index: 50;
+	padding: 0;
+	display: inline-block;
+	border: 1px solid #cacaca;
+	vertical-align: top;
+}
+.label:hover{
+	color: #444;
+	box-shadow: 0 1px 1px 0 #dadada;
+	-moz-box-shadow: 0 1px 1px 0 #dadada;
+	-webkit-box-shadow: 0 1px 1px 0 #dadada;
+}
+.label .label-icon{
+	float: left;
+	color: #aaa;
+	width: 22px;
+	height: 22px;
+	margin: 0;
+	padding: 0 5px;
+	display: inline-block;
+	font-size: 12px;
+	line-height: 22px;
+}
+.label:hover .label-icon{
+	color: #79AB2B;
+}
+.label:hover .label-icon.ki-github{
+	color: #222222;
+}
+.label:hover .label-icon.ki-twitter{
+	color: #50ABF1;
+}
+.label .label-title{
+	float: left;
+	height: 22px;
+	margin: 0;
+	padding: 0 7px;
+	display: inline-block;
+	font-size: 12px;
+	line-height: 22px;
+}
+.label .label-icon+.label-title{
+	border-left: 1px solid #cacaca;
+}
+.note{
+	color: #7096B1;
+	margin: 7px 0;
+	padding: 10px 15px;
 	display: block;
-	position: absolute;
-	font-size: 10px;
-	line-height: 14px;
-	white-space: nowrap;
-	text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
-	background-color: #608822;
+	font-size: 13px;
+	text-align: left;
+	line-height: 18px;
+	border-left: 3px solid #7096B1;
+	background-color: rgba(112, 150, 177, 0.2);
 }
 /* @end CORE */
 
@@ -85,20 +139,24 @@ a:hover{
 	font-size: 26px;
 	line-height: 48px;
 	font-weight: 600;
-	text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 	vertical-align: top;
 }
 .header .header-table .header-left .title .label{
-	margin: 15px 0 0 5px;
-	padding: 3px 8px;
-	display: inline-block;
-	font-size: 10px;
-	line-height: 14px;
+	color: rgba(255, 255, 255, 0.8);
+	height: 18px;
+	margin: 16px 0 0 0;
+	border: none;
 	background-color: #608822;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+.header .header-table .header-left .title .label .label-title{
+	float: none;
+	padding: 0 5px;
+	line-height: 18px;
 	vertical-align: top;
-	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
 }
 .header .header-table .header-right{
 	display: table-cell;
@@ -106,94 +164,47 @@ a:hover{
 	vertical-align: top;
 }
 .header .header-table .header-right .github{
-	color: #fff;
+	color: rgba(255, 255, 255, 0.75);
 	margin: 0;
 	padding: 0 15px;
 	display: inline-block;
 	font-size: 14px;
 	line-height: 49px;
-	text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 	background-color: #608822;
 }
-.header .header-table .header-right .github:hover{
+.header .header-table .header-right .github .ki{
+	color: rgba(255, 255, 255, 0.5);
+	margin: 0 2px 0 0;
+	font-size: 22px;
+	line-height: 49px;
+}
+.header .header-table .header-right .github:hover,
+.header .header-table .header-right .github:hover .ki{
+	color: #ffffff;
 }
 /* @end HEADER */
 
-/* @start SHOWCASE */
-.showcase{
+/* @start TOOLBAR */
+.toolbar{
 	width: 100%;
-	height: 5px;
+	height: 35px;
 	margin: 0;
-	padding: 0;
+	padding: 5px 0;
 	display: block;
-	border-bottom: 1px solid #cccccc;
+	border-bottom: 1px solid #d0d0d0;
 	background: #ffffff;
+	box-shadow: 0 1px 1px 0 #dadada;
+	-moz-box-shadow: 0 1px 1px 0 #dadada;
+	-webkit-box-shadow: 0 1px 1px 0 #dadada;
 }
-/* @end SHOWCASE */
+/* @end TOOLBAR */
 
 /* @start CONTENT */
 .content{
 	margin: 0;
 	padding: 0;
 	display: block;
-	border-top: 1px solid #ffffff;
-}
-.content .copyright-note{
-	width: 770px;
-	color: #ffffff;
-	margin: 20px auto 0 auto;
-	padding: 10px;
-	font-size: 13px;
-	line-height: 18px;
-	text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
-	border-bottom: 3px solid #59788d;
-	background-color: #7096B1;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-}
-.content .copyright-note a{
-	color: #ffffff;
-	text-decoration: underline;
-}
-.content .copyright-note a:hover{
-	color: rgba(255, 255, 255, 0.65);
-}
-.content .copyright-note .read-more{
-	margin: 10px 0 0 0;
-	padding: 0;
-	display: block;
-	text-align: right;
-}
-.content .copyright-note .read-more i{
-	float: left;
-	font-size: 12px;
-}
-.content .copyright-note .read-more .button{
-	margin: 0;
-	padding: 5px 12px;
-	display: inline-block;
-	font-size: 12px; 
-	line-height: 18px;
-	text-decoration: none;
-	bordeR: 1px solid #fff;
-	background: transparent;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-}
-.content .copyright-note .read-more .button:hover{
-	color: #fff;
-	background-color: rgba(0, 0, 0, 0.2);
-}
-.content .copyright-note .read-more .button:active{
-	color: #7096B1;
-	text-shadow: none;
-	border-color: #7096B1;
-	background-color: #fff;
-	box-shadow: 0 0 0 1px #fff;
-	-moz-box-shadow: 0 0 0 1px #fff;
-	-webkit-box-shadow: 0 0 0 1px #fff;
 }
 .content .icon-container{
 	width: 100%;
@@ -207,49 +218,127 @@ a:hover{
 	-webkit-box-shadow: 0 1px 1px 0 #d8d8d8;
 }
 .content .icon-header{
-	height: 60px;
+	height: 220px;
 	margin: 0;
 	padding: 0 20px;
 	display: block;
 	z-index: 20;
 	position: relative;
 	border-bottom: 1px solid #d0d0d0;
-	background-color: #eaeaea;
+	background-color: #f4f4f4;
+}
+.content .icon-header .icon-showcase{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	display: table;
+}
+.content .icon-header .icon-showcase .icon-info{
+	margin: 0;
+	padding: 20px 10px;
+	display: table-cell;
+	vertical-align: top;
+}
+.content .icon-header .icon-showcase .icon-info .icon-title{
+	font-size: 24px;
+	line-height: 24px;
+}
+.content .icon-header .icon-showcase .icon-info ul.icon-meta{
+	margin: 10px 0;
+	padding: 0;
+	display: block;
+	list-style: none;
+}
+.content .icon-header .icon-showcase .icon-info ul.icon-meta li{
+	color: #777777;
+	margin: 0 0 0 10px;
+	padding: 0;
+	display: block;
+	font-size: 13px;
+	line-height: 18px;
+	list-style: none;
+}
+.content .icon-header .icon-showcase .icon-sizes{
+	margin: 0;
+	padding: 15px 10px;
+	display: table-cell;
+	text-align: right;
+	vertical-align: top;
+}
+.content .icon-header .icon-showcase .icon-show{
+	margin: 0 10px;
+	padding: 8px 8px 5px 8px;
+	display: inline-block;
+	position: relative;
+	border: 1px solid #aaa;
+	text-align: center;
+	vertical-align: bottom;
+}
+.content .icon-header .icon-showcase .icon-show .icon-legend{
+	color: #777;
+	top: -7px;
+	left: 2px;
+	margin: 0;
+	padding: 2px 5px;
+	display: inline-block;
+	position: absolute;
+	font-size: 8px;
+	line-height: 8px;
+	background-color: #f4f4f4;
+}
+.content .icon-header .icon-showcase .icon-show .ki{
+	vertical-align: baseline !important;
+}
+.content .icon-header .icon-showcase .icon-show.icon-show-18 .ki{
+	font-size: 18px;
+}
+.content .icon-header .icon-showcase .icon-show.icon-show-24 .ki{
+	font-size: 24px;
+}
+.content .icon-header .icon-showcase .icon-show.icon-show-32 .ki{
+	font-size: 32px;
+}
+.content .icon-header .icon-showcase .icon-show.icon-show-48 .ki{
+	font-size: 48px;
+}
+.content .icon-header .icon-showcase .icon-show.icon-show-64 .ki{
+	font-size: 64px;
+}
+.content .icon-header .icon-showcase .icon-show.icon-show-128 .ki{
+	font-size: 128px;
 }
 .content .icon-header ul.icon-tabs{
 	height: 60px;
-	margin: 0;
+	margin: -12px 0 0 0;
 	padding: 20px 0 0 0;
 	display: inline-block;
 	list-style: none;
 	vertical-align: top;
 }
 .content .icon-header ul.icon-tabs li.icon-tab{
-	float: left;
-	height: 40px;
+	height: 39px;
 	margin: 0;
 	padding: 0;
 	display: inline-block;
 	list-style: none;
 }
 .content .icon-header ul.icon-tabs li.icon-tab a{
-	float: left;
-	color: #555555;
+	color: #777;
 	cursor: pointer;
-	height: 40px;
+	height: 39px;
 	margin: 0;
 	padding: 0 30px;
 	display: inline-block;
 	font-size: 14px;
-	line-height: 40px;
+	line-height: 39px;
 	border-top: 1px solid transparent;
 	border-left: 1px solid transparent;
 	border-right: 1px solid transparent;
 	border-bottom: 1px solid transparent;
 }
 .content .icon-header ul.icon-tabs li.icon-tab:hover a{
-	color: #79AB2B;
-	border-bottom-color: #d0d0d0;
+	color: #608822;
+	border-bottom: 1px solid #d0d0d0;
 	background-color: #ffffff;
 }
 .content .icon-header ul.icon-tabs li.icon-tab.active a{
@@ -279,6 +368,12 @@ a:hover{
 	position: relative;
 	text-align: center;
 }
+.content .icon-list .icons{
+	width: auto;
+	margin: 0;
+	padding: 0;
+	display: none;
+}
 .content .icon-list .icons h2{
 	color: #777;
 	margin: 20px 0 10px 0;
@@ -291,12 +386,6 @@ a:hover{
 .content .icon-list .icons>h2:first-child{
 	margin-top: 0;
 }
-.content .icon-list .icons{
-	width: auto;
-	margin: 0;
-	padding: 0;
-	display: inline-block;
-}
 .content .icon-list .icons .icons-row{
 	width: auto;
 	margin: 0;
@@ -305,28 +394,60 @@ a:hover{
 	text-align: left;
 }
 .content .icon-list .icons .icons-row .icon{
-	color: #777;
+	color: #888;
 	cursor: pointer;
-	width: 50px;
-	height: 50px;
-	margin: 5px 2px;
+	width: 220px;
+	height: 35px;
+	margin: 5px;
 	padding: 0;
-	display: inline-block;
+	display: inline-table;
 	position: relative;
 	text-align: center;
 	vertical-align: top;
-	border: 1px solid #cccccc;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-}
-.content .icon-list .icons .icons-row .icon span.ki{
-	font-size: 32px;
-	line-height: 48px;
+	border: 1px solid #cacaca;
 }
 .content .icon-list .icons .icons-row .icon:hover{
-	color: #555;
-	border-color: #aaa;
+	color: #333;
+	border-color: #bababa;
+	box-shadow: 0 1px 1px 0 #cacaca;
+	-moz-box-shadow: 0 1px 1px 0 #cacaca;
+	-webkit-box-shadow: 0 1px 1px 0 #cacaca;
+}
+.content .icon-list .icons .icons-row .icon span.ki{
+	width: 50px;
+	display: table-cell;
+	font-size: 18px;
+	line-height: 35px;
+	vertical-align: top;
+}
+.content .icon-list .icons .icons-row .icon .icon-meta{
+	width: 170px;
+	height: 35px;
+	margin: 0;
+	padding: 5px 10px;
+	display: table-cell;
+	text-align: left;
+	border-left: 1px solid #cccccc;
+	vertical-align: top;
+}
+.content .icon-list .icons .icons-row .icon .icon-meta .icon-class{
+	margin: 0;
+	padding: 0;
+	display: block;
+	font-size: 13px;
+	line-height: 13px;
+	vertical-align: top;
+}
+.content .icon-list .icons .icons-row .icon .icon-meta .icon-unicode{
+	float: right;
+	color: #777;
+	margin: 0;
+	padding: 1px 3px;
+	display: inline-block;
+	font-size: 10px;
+	line-height: 10px;
+	background-color: #e0e0e0;
+	vertical-align: top;
 }
 /* @end CONTENT */
 

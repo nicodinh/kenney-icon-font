@@ -3,13 +3,11 @@ window.addEvent("domready", function(){
  |	KENNEY ICON FONT
  |	@file		./js/script.css
  |	@author		KENNEY.nl & SamBrishes, pytesNET
- |	@version	0.1.0 [0.1.0]
+ |	@version	0.2.0 [0.2.0]
  |
  |	@license	CC0 1.0
  */	
  
-	// I will improve the demonstration page, when I find time for it!
-	
 	/*
 	 |	SIMPLE TAB NAVIGATION
 	 */
@@ -24,43 +22,30 @@ window.addEvent("domready", function(){
 			$(this).getParent().addClass("active");
 		}
 	});
-	$(tabs).getChildren("li>a")[0].click();
-	
+	$(tabs).getChildren("li>a")[1].click();
 	
 	/*
-	 |	SIMPLE TOOLTIPs
+	 |	ICON SHOWCASE
 	 */
-	var icons = $$(".icon");
-	icons.addEvent("mouseenter", function(event){
-		var link = $(this).getChildren("span.ki")[0];
-		var className = $(link).get("class").replace(/(ki ki-)/, "");
+	$$(".icon").addEvent("click", function(event){
+		var icon = 		$(this).getChildren(".icon-meta>.icon-class")[0].get("text"),
+			icon = 		iconList[icon.replace("ki-", "")],
+			showcase = 	$("showcase");
 		
-		if($(link).get("data-tooltip") == null && iconList[className] !== undefined){
-			var icon = iconList[className];
-			var tooltip = new Element("div", {
-				"class":	"tooltip",
-				"text":		icon.class
-			});
-			
-			$(link).set("data-tooltip", "true")
-			$(tooltip).inject(link, "before");
+		$(showcase).getElement(".icon-title").set("text", icon.class);
+		$(showcase).getElement(".icon-code").set("text", "\\"+icon.code);
+		$(showcase).getElement(".icon-since").set("text", icon.added);
+		$(showcase).getElement(".icon-revised").set("text", icon.revised);
+		$(showcase).getElements(".icon-show>.ki").set("class", "ki " + icon.class);
+		
+		if(icon.policy !== undefined){
+			$(showcase).getElement(".icon-policy").set({"href": icon.policy, styles: {"display": "inline-block"}});
+		} else {
+			$(showcase).getElement(".icon-policy").setStyle("display", "none");
 		}
+		
+		$(window).scrollTo(0, 0);
 	});
 	
-	icons.addEvent("mouseleave", function(event){
-		var link = $(this).getChildren("span.ki")[0];
-		var tooltip = $(this).getChildren("div.tooltip");
-		
-		if(tooltip.length > 0){
-			Object.each(tooltip, function(value){
-				if(typeof(value) == "object"){
-					$(value).destroy();
-				}
-			});
-		}
-		if($(link).get("data-tooltip") !== null){
-			$(link).removeProperty("data-tooltip");
-		}
-	});
 	
 });
